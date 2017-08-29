@@ -20,7 +20,7 @@ namespace Snake
             }
         }
 
-        public void DrawVLine()
+        public void DrawLine()
         {
             foreach (Point p in pList)
             {

@@ -11,10 +11,10 @@ namespace Snake
         static void Main(string[] args)
         {
             HorizontalLine HLine = new HorizontalLine(1, 10, 3, '-');
-            HLine.DrawHLine();
+            HLine.DrawLine();
 
             VerticalLine VLine = new VerticalLine(12, 1, 10, '+');
-            VLine.DrawVLine();
+            VLine.DrawLine();
             
             Console.ReadLine();
 
