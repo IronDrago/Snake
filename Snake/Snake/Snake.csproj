@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FoodCreator.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="HorizontalLine.cs" />
