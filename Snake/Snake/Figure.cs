@@ -11,7 +11,7 @@ namespace Snake
         protected List<Point> pList;        // возможность использования копий для наследников
 
         // Отрисовка фигуры
-        public virtual void DrawFigure()
+        public void Draw()
         {
             foreach (Point p in pList)
             {

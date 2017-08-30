@@ -13,6 +13,11 @@ namespace Snake
         public char sym;
 
         // Конструктор точки
+        public Point()
+        {
+        }
+
+        // -//-
         public Point(int x, int y, char sym)
         {
             this.x = x;
@@ -67,6 +72,11 @@ namespace Snake
         {
             sym = ' ';
             Draw();
+        }
+
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
         }
     }
 }

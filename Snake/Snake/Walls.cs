@@ -39,7 +39,7 @@ namespace Snake
         // Отрисовка стен
         public void Draw()
         {
-            foreach (var wall in wallList) { wall.DrawFigure(); }
+            foreach (var wall in wallList) { wall.Draw(); }
         }
     }
 }
