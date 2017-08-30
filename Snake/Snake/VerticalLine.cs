@@ -8,6 +8,7 @@ namespace Snake
 {
     class VerticalLine : Figure
     {
+        // Конструктор вертикальной прямой
         public VerticalLine(int x, int yTop, int yBottom, char sym)
         {
             pList = new List<Point>();

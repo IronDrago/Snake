@@ -8,12 +8,13 @@ namespace Snake
 {
     class FoodCreator
     {
-        int mapHeight;
-        int mapWidht;
-        char sym;
+        private int mapHeight;
+        private int mapWidht;
+        private char sym;
 
         Random random = new Random();
 
+        // Конструктор еды
         public FoodCreator(int mapWidht, int mapHeight, char sym)
         {
             this.mapWidht = mapWidht;
@@ -21,6 +22,7 @@ namespace Snake
             this.sym = sym;
         }
 
+        // Отрисовка еды
         public Point CreateFood()
         {
             int x = random.Next(2, mapWidht - 2);

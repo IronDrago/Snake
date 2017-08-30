@@ -10,11 +10,11 @@ namespace Snake
     {
         List<Figure> wallList;
 
+        // Конструктор стен
         public Walls(int mapWidht, int mapHeight)
         {
             wallList = new List<Figure>();
 
-            // Отрисовка рамки
             HorizontalLine topLine = new HorizontalLine(0, mapWidht - 2, 0, '+');
             HorizontalLine bottomLine = new HorizontalLine(0, mapWidht - 2, mapHeight - 1, '+');
             VerticalLine rightLine = new VerticalLine(0, mapHeight - 1, 0, '+');
@@ -26,6 +26,7 @@ namespace Snake
             wallList.Add(leftLine);
         }
 
+        // Было ли столкновение змейки со стеной
         internal bool IsHit(Figure figure)
         {
             foreach (var wall in wallList)
@@ -35,6 +36,7 @@ namespace Snake
             return false;
         }
 
+        // Отрисовка стен
         public void Draw()
         {
             foreach (var wall in wallList) { wall.DrawFigure(); }

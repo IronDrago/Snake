@@ -10,6 +10,7 @@ namespace Snake
     {
         Direction direction;
 
+        // Конструктор змейки
         public Snake(Point tail, int length, Direction direction)
         {
             this.direction = direction;
@@ -22,6 +23,7 @@ namespace Snake
             }
         }
 
+        // Движение змейки
         internal void Move()
         {
             Point tail = pList.First();
@@ -34,6 +36,7 @@ namespace Snake
 
         }
 
+        // Положения головы змейки после шага
         public Point GetNextPoint()
         {
             Point head = pList.Last();
@@ -42,6 +45,7 @@ namespace Snake
             return nextPoint;
         }
 
+        // Было ли столкновение головы змейки с её хвостом
         internal bool IsHitTail()
         {
             var head = pList.Last();
@@ -52,6 +56,7 @@ namespace Snake
             return false;
         }
 
+        // Поворот змейки
         public void HandleKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow) { direction = Direction.LEFT; }
@@ -60,6 +65,7 @@ namespace Snake
             else if (key == ConsoleKey.DownArrow) { direction = Direction.DOWN; }
         }
 
+        // Съела ли змейка еду
         internal bool Eat(Point food)
         {
             Point head = GetNextPoint();

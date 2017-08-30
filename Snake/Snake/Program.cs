@@ -30,6 +30,7 @@ namespace Snake
 
             while (true)
             {
+                // Проверка на проигрыш
                 if (walls.IsHit(snake) || snake.IsHitTail()) { break; }
 
                 // Отрисовка новой еды

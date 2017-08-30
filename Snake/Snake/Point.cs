@@ -12,6 +12,7 @@ namespace Snake
         public int y;
         public char sym;
 
+        // Конструктор точки
         public Point(int x, int y, char sym)
         {
             this.x = x;
@@ -19,6 +20,7 @@ namespace Snake
             this.sym = sym;
         }
 
+        // -//-
         public Point(Point p)
         {
             x = p.x;
@@ -26,6 +28,7 @@ namespace Snake
             sym = p.sym;
         }
 
+        // Изменение направления
         public void Move(int offset, Direction direction)
         {
             if (direction == Direction.RIGHT)
@@ -46,17 +49,20 @@ namespace Snake
             }
         }
 
+        // Было ли столкновение точек
         public bool IsHit(Point p)
         {
             return p.x == this.x && p.y == this.y;
         }
 
+        // Отрисовка точки
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
 
+        // Очистка точки
         public void Clear()
         {
             sym = ' ';

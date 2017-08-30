@@ -8,6 +8,7 @@ namespace Snake
 {
     class HorizontalLine : Figure
     {
+        // Конструктор горизонтальной прямой
         public HorizontalLine(int xLeft, int xRight, int y, char sym)
         {
             pList = new List<Point>();
